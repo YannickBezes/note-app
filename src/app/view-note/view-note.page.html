@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="note">
+    <ion-card-content>
+      <ion-card-title>
+        {{ note.title }}
+      </ion-card-title>
+      <div class="note-date">{{ note.date }}</div>
+      <hr />
+      <div>{{ note.content }}</div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+      <ion-button (click)="deleteNote(note.createDate)" color="danger">
+        Supprimer
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>
